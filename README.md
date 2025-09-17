@@ -31,7 +31,7 @@ Create new preloader to: С:\mtkclient\mtkclient_2.0.1\preloader_path\boot1.bin
 Press Enter to close
 ```
 ## Additionally
-The Russian forum [4pda](https://4pda.to/forum/index.php?showtopic=1059838&view=findpost&p=136154776) has very detailed instruction, including detailed installation of mtkclient for Windows, creating and restoring backups, a detailed description of using the GUI, and instructions for manually creating a patch for preloader.
+On the Russian 4pda forum, user Max_Goblin provides very detailed [instructions](https://4pda.to/forum/index.php?showtopic=1059838&view=findpost&p=136154776), including detailed installation of mtkclient for Windows, creating and restoring backups, a detailed description of using the graphical interface, and instructions for manually creating a patch for the preloader.
 
 ---
 
