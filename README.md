@@ -28,7 +28,8 @@ Jupm offset code: 0x800 to 0x2000
 Write flag block to: 0x1000
 Fastboot lock state: 0x22 -> 00
 Create new preloader to: С:\mtkclient\mtkclient_2.0.1\preloader_path\boot1.bin
-Press Enter to close```
+Press Enter to close
+```
 
 ---
 
