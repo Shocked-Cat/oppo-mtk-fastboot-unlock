@@ -32,6 +32,7 @@ Press Enter to close
 ```
 ## Additionally
 The Russian forum [4pda](https://4pda.to/forum/index.php?showtopic=1059838&view=findpost&p=136154776) has very detailed instructions, including detailed installation of mtkclient for Windows, creating and restoring backups, a detailed description of using the GUI, and instructions for manually creating a patch for preloader.
+
 ---
 
 ## This project is licensed under the AGPL-3.0 License. See the [LICENSE](LICENSE) file for details.
