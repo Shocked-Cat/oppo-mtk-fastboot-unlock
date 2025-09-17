@@ -6,7 +6,7 @@ in which the fastboot lock flag is changed to unlocked.
 
 ## Instructions
 * Download and install [Python](https://www.python.org/downloads) 3.4+ version
-* Use [mtkclient](https://github.com/bkerler/mtkclient) for gui to read the preloader (boot1) dump from you Oppo
+* Use [mtkclient](https://github.com/bkerler/mtkclient) and gui to read the preloader (boot1) dump from you Oppo
 * Place the preloader backup in the same folder as preloader_path.py, making sure to name it boot1.bin
 * Then double-click on the Python script.
 * After the script finishes running, the finished preloader will be located in the preloader_path folder under the name boot1.bin
@@ -29,3 +29,7 @@ Write flag block to: 0x1000
 Fastboot lock state: 0x22 -> 00
 Create new preloader to: С:\mtkclient\mtkclient_2.0.1\preloader_path\boot1.bin
 Press Enter to close```
+
+---
+
+## This project is licensed under the AGPL-3.0 License. See the [LICENSE](LICENSE) file for details.
