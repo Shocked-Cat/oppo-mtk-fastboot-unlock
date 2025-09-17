@@ -3,7 +3,7 @@ The script in this repository is designed to create a modified preloader based o
 
 
 ---
-[mtkclient]([URL](https://github.com/bkerler/mtkclient))
+[URL](https://github.com/bkerler/mtkclient)
 
 
 
