@@ -3,7 +3,8 @@ The script in this repository is designed to create a modified preloader based o
 
 
 ---
-[URL](https://github.com/bkerler/mtkclient)
+To use this script, you need to use [mtkclient](https://github.com/bkerler/mtkclient) to read the preloader (boot1) dump from the device and place it in the same folder as preloader_path.py
+
 
 
 
