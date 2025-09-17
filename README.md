@@ -13,7 +13,8 @@ in which the fastboot lock flag is changed to unlocked.
 * Writing the resulting preloader to the device, use the same mtkclient and gui
 ---
 ## Example of a log of a successful patch creation
-```Dev. Max_Goblin - 4pda
+```
+Dev. Max_Goblin - 4pda
 boot1.bin found state: successfully
 Flag block find state: successfully
 lock state: 22 (lock)
