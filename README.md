@@ -25,12 +25,12 @@ Flag block find state: successfully
 lock state: 22 (lock)
 Write range zeros: 0x800:0x2000
 Jupm offset code: 0x800 to 0x2000
-0x20d: 08 -> 10
-0x21d: 08 -> 10
-0x211: 08 -> 20
-0x212: 04 -> 20
-0x221: 08 -> 20
-0x222: 04 -> 20
+0x20d: 08 -> 20
+0x21d: 08 -> 20
+0x211: 08 -> 10
+0x212: 04 -> 10
+0x221: 08 -> 10
+0x222: 04 -> 10
 Write flag block to: 0x1000
 Fastboot lock state: 0x22 -> 00
 Create new preloader to: С:\mtkclient\mtkclient_2.0.1\preloader_path\boot1.bin
