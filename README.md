@@ -11,6 +11,11 @@ in which the fastboot lock flag is changed to unlocked.
 * Then double-click on the Python script.
 * After the script finishes running, the finished preloader will be located in the preloader_path folder under the name boot1.bin
 * Writing the resulting preloader to the device, use the same mtkclient and gui
+* Be sure to enable OEM Unlock in the developer settings
+* Use adb and the adb reboot bootloader command to get into unlocked fastboot
+* Then, after entering fastboot, use the fastboot flashing unlock command
+* Confirm bootloader unlocking by pressing the Volume Up or Volume Down key. For clarity, read the text on the device screen after the unlock request
+* Rejoice at the end of the bootloader unlocking ordeal...
 ---
 ## Example of a log of a successful patch creation
 ```
@@ -20,8 +25,8 @@ Flag block find state: successfully
 lock state: 22 (lock)
 Write range zeros: 0x800:0x2000
 Jupm offset code: 0x800 to 0x2000
-0x20d: 08 -> 20
-0x21d: 08 -> 20
+0x20d: 08 -> 10
+0x21d: 08 -> 10
 0x211: 08 -> 20
 0x212: 04 -> 20
 0x221: 08 -> 20
