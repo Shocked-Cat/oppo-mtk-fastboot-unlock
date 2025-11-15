@@ -51,16 +51,16 @@ def auto_path_preloader(flag: bytes, fastboot_lock_state: int, file_size: int):
 
         # I don't fully understand what this is,
         # but it is responsible for executing the external flag block.
-        print(f"0x211: {code_offset2[0]:02x} -> 20")
+        print(f"0x211: {code_offset2[0]:02x} -> 10")
         f.seek(0x211)      
         f.write(b"\x10")
-        print(f"0x212: {code_offset3[0]:02x} -> 20")
+        print(f"0x212: {code_offset3[0]:02x} -> 10")
         f.seek(0x212)
         f.write(b"\x10")
-        print(f"0x221: {code_offset4[0]:02x} -> 20")
+        print(f"0x221: {code_offset4[0]:02x} -> 10")
         f.seek(0x221)
         f.write(b"\x10")
-        print(f"0x222: {code_offset5[0]:02x} -> 20")
+        print(f"0x222: {code_offset5[0]:02x} -> 10")
         f.seek(0x222)
         f.write(b"\x10")
         
@@ -142,3 +142,4 @@ def copy_preloader():
 
 copy_preloader()
 input("Press Enter to close ")
+
