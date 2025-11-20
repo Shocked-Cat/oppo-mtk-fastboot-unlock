@@ -40,5 +40,16 @@ Press Enter to close
 On the Russian 4pda forum, user Max_Goblin provides very detailed [instructions](https://4pda.to/forum/index.php?showtopic=1059838&view=findpost&p=136154776), including detailed installation of mtkclient for Windows, creating and restoring backups, a detailed description of using the graphical interface, and instructions for manually creating a patch for the preloader.
 
 ---
-
+## Models for which a patch has already been created and tested
+| Model              | Device code    | Status                                         |
+|--------------------|----------------|------------------------------------------------|
+| Oppo A17K          | CPH2471        | Full support                                   |
+| Oppo A17           | CPH2477        | Full support                                   |
+| Oppo A55 4G        | CPH2325        | Full support                                   |
+| Oppo A56 5G        | PFVM110        | Full support                                   |
+| Oppo A73 5G        | CPH2161        | To work without GUI, auth_sv5.auth is required.|
+| Oppo Reno 4 Lite   | CPH2125        | Full support                                   |
+| Oppo Reno 5 Lite   | CPH2205        | Full support                                   |
+#### Ready-made preloaders are available on 4pda.
+---
 ## This project is licensed under the AGPL-3.0 License. See the [LICENSE](LICENSE) file for details.
