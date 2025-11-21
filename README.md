@@ -39,17 +39,22 @@ Press Enter to close
 ## Additionally
 On the Russian 4pda forum, user Max_Goblin provides very detailed [instructions](https://4pda.to/forum/index.php?showtopic=1059838&view=findpost&p=136154776), including detailed installation of mtkclient for Windows, creating and restoring backups, a detailed description of using the graphical interface, and instructions for manually creating a patch for the preloader.
 
----
-## Models for which a patch has already been created and tested
-| Model              | Device code    | Status                                         |
-|--------------------|----------------|------------------------------------------------|
-| Oppo A17K          | CPH2471        | Full support                                   |
-| Oppo A17           | CPH2477        | Full support                                   |
-| Oppo A55 4G        | CPH2325        | Full support                                   |
-| Oppo A56 5G        | PFVM110        | Full support                                   |
-| Oppo A73 5G        | CPH2161        | To work without GUI, auth_sv5.auth is required.|
-| Oppo Reno 4 Lite   | CPH2125        | Full support                                   |
-| Oppo Reno 5 Lite   | CPH2205        | Full support                                   |
+---Reno 10 5G -CPH2531 – Dimensity 7050 (MT6877V)
+## Information about supported devices
+| Model              | Device code    | SoC                | SoC ID     | Status                                                        |
+|--------------------|----------------|--------------------|------------|---------------------------------------------------------------|
+| Oppo A17           | CPH2477        | Helio G35          | MT6765     | Full support                                                  |
+| Oppo A17K          | CPH2471        | Helio G35          | MT6765     | Full support                                                  |
+| Oppo A54 4G        | CPH2239        | Helio G35          | MT6765     | Problems DAA GUI and cmd, auth_sv5.auth not tested            |
+| Oppo A55 4G        | CPH2325        | Helio G35          | MT6765     | Full support                                                  |
+| Oppo A56 5G        | PFVM110        | Dimensity 700      | MT6833     | Full support                                                  |
+| Oppo A58x          | PHJ110         | Dimensity 700      | MT6833     | Problems DAA gui and cmd, auth_sv5.auth tested                |
+| Oppo A73 5G        | CPH2161        | Dimensity 720      | MT6853     | GUI support, to work without GUI, auth_sv5.auth is required.  |
+| Oppo Reno 10 5g    | CPH2531        | Dimensity 7050     | MT6877V    | Problems DAA gui and cmd, auth_sv5.auth not tested            |
+| Oppo Reno 4 Lite   | CPH2125        | Helio P95          | MT6779     | Full support                                                  |
+| Oppo Reno 5 Lite   | CPH2205        | Helio P95          | MT6779     | Full support                                                  |
 #### Ready-made preloaders are available on 4pda.
+#### Problems with DAA don't necessarily mean unlocking isn't supported, especially if auth_sv5.auth hasn't been tested. For Oppo, it's usually simply impossible to find a valid DA, but I recommend trying.
+#### If you've unlocked the bootloader of any Oppo device using mtkclient and this patch, please create an issue and let me know which new Oppo device this method worked for, preferably providing the stock preloader and the patched one. Alternatively, you can report that this method didn't work. You can also contact me on Telegram.
 ---
 ## This project is licensed under the AGPL-3.0 License. See the [LICENSE](LICENSE) file for details.
