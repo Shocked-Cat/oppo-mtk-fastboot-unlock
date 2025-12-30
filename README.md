@@ -49,7 +49,7 @@ On the Russian 4pda forum, user Max_Goblin provides very detailed [instructions]
 | Oppo A54 4G        | CPH2239        | Helio G35          | MT6765            | Problems DAA GUI and cmd, auth_sv5.auth not tested            |
 | Oppo A55 4G        | CPH2325        | Helio G35          | MT6765            | Full support                                                  |
 | Oppo A56 5G        | PFVM110        | Dimensity 700      | MT6833            | Full support                                                  |
-| Oppo A58 4G        | CPH2577        | Helio G85          | MT6768/MT6769     | Full support                                                  |
+| Oppo A58 4G        | CPH2577        | Helio G85          | MT6768/MT6769     | Problems DAA gui and cmd, auth_sv5.auth not tested                                       |
 | Oppo A58x          | PHJ110         | Dimensity 700      | MT6833            | Problems DAA gui and cmd, auth_sv5.auth tested                |
 | Oppo A73 5G        | CPH2161        | Dimensity 720      | MT6853            | GUI support, to work without GUI, auth_sv5.auth is required.  |
 | Oppo Reno 10 5g    | CPH2531        | Dimensity 7050     | MT6877V           | Problems DAA gui and cmd, auth_sv5.auth not tested            |
