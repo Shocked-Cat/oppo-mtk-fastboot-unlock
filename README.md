@@ -21,15 +21,16 @@ in which the fastboot lock flag is changed to unlocked.
 ```
 Dev. Max_Goblin - 4pda
 boot1.bin found state: successfully
+Memory type: UFS_BOOT
 Flag block find state: successfully
 lock state: 22 (lock)
-Write range zeros: 0x800:0x2000
-Jupm offset code: 0x800 to 0x2000
-0x20d: 08 -> 20
-0x21d: 08 -> 20
-0x211: 08 -> 10
+Write range zeros: 0x1000:0x2000
+Jupm offset code: 0x1000 to 0x2000
+0x20d: 10 -> 20
+0x21d: 10 -> 20
+0x211: 10 -> 10
 0x212: 04 -> 10
-0x221: 08 -> 10
+0x221: 10 -> 10
 0x222: 04 -> 10
 Write flag block to: 0x1000
 Fastboot lock state: 0x22 -> 00
