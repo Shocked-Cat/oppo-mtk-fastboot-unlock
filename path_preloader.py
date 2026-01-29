@@ -3,7 +3,8 @@ from os import makedirs
 from sys import exit
 
 normal_file_size = 4 * 1024 * 1024
-name_dir = Path("preloader_path/boot1.bin")
+ndo = Path("boot1.bin")
+ndc = Path("preloader_path/boot1.bin")
 print("Dev. Max_Goblin - 4pda")
 
 def auto_path_preloader(flag: bytes, fastboot_lock_state: int, file_size: int):
@@ -38,8 +39,8 @@ def auto_path_preloader(flag: bytes, fastboot_lock_state: int, file_size: int):
             f.write(jumpr)
         else:
             print("Initial code indentation causes 0x2000. Script cannot work correctly")
-            input("Press Enter to close: error 4")
-            exit(4)
+            input("Press Enter to close: error 6")
+            exit(6)
             
         # change code offset
         print(f"0x20d: {int(code_offset/256):02x} -> 20")
@@ -90,8 +91,8 @@ def read_flag_block(file_size: int):
             if choice.lower() == "y":
                 flag = b""
             else:
-                input("Press Enter to close: error 3")
-                exit(3)
+                input("Press Enter to close: error 5")
+                exit(5)
         f.seek(data.find(pattern_flag) + 0x4C)
         fastboot_lock_state = f.read(0x1)
 
@@ -103,29 +104,44 @@ def read_flag_block(file_size: int):
         return auto_path_preloader(flag, fastboot_lock_state[0], file_size)
 
 
+def check_validation():
+        file_size = ndo.stat().st_size
+        if file_size != normal_file_size:
+            print(f"Expected file size - {0x400000} byte, received size - {file_size}.")
+            choice = input("Ignore this and continue? (y/n) ")
+            if choice.lower() == "y":
+                print(f"continue with file with size difference {normal_file_size - file_size} byte")
+            else:
+                input("Press Enter to close: error 2")
+                exit(2)
+
+        with open(ndc, "rb") as f:
+            magic_sign = f.read(0x10)
+            
+        if magic_sign.startswith(b"UFS_BOOT"):
+            print("Memory type: UFS_BOOT")
+        elif magic_sign.startswith(b"EMMC_BOOT"):
+            print("Memory type: EMMC_BOOT")
+        elif magic_sign.startswith(b"MMM\x018\x00\x00\x00FILE_INF"):
+            print("Memory type: RAW\nThis script cannot work with RAW preloader.\nRAW preloader is not a full-fledged boot1 region and does not have an offset header, which this script works with.")
+            input("Press Enter to close: error 3")
+            exit(3)
+        else:
+            print("Memory type: Unknown")
+            input("Press Enter to close: error 4")
+            exit(4)
+        
+        return read_flag_block(file_size)
+
 def copy_preloader():
     makedirs("preloader_path", exist_ok=True)
-    src = Path("boot1.bin")
     while True:
         try:
-            if not src.exists():
-                raise FileNotFoundError
-            file_size = src.stat().st_size
-            if file_size != normal_file_size:
-                print(f"Expected file size - {0x400000} byte, received size - {file_size}.")
-                choice = input("Ignore this and continue? (y/n) ")
-                if choice.lower() == "y":
-                    print(f"continue with file with size difference {normal_file_size - file_size} byte")
-                else:
-                    input("Press Enter to close: error 1")
-                    exit(1)
-
+            with open(ndo, "rb") as f_org:
+                with open(ndc, "wb") as f_pth:
+                    f_pth.write(f_org.read())
 
             print("boot1.bin found state: successfully")
-            with open(src, "rb") as f_org:
-                dst = Path("preloader_path/boot1.bin")
-                with open(dst, "wb") as f_pth:
-                    f_pth.write(f_org.read())
 
             break
 
@@ -135,10 +151,10 @@ def copy_preloader():
             if choice.lower() == "y":
                 pass
             else:
-                input("Press Enter to close: error 2")
-                exit(2)
+                input("Press Enter to close: error 1")
+                exit(1)
 
-    return read_flag_block(file_size)
+    return check_validation()
 
 copy_preloader()
 input("Press Enter to close ")
