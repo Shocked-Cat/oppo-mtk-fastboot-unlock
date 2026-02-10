@@ -122,14 +122,18 @@ def check_validation():
             print("Memory type: UFS_BOOT")
         elif magic_sign.startswith(b"EMMC_BOOT"):
             print("Memory type: EMMC_BOOT")
+        elif magic_sign.startswith(b"COMBO_BOOT"):
+            print("Memory type: COMBO_BOOT (UFS)")
         elif magic_sign.startswith(b"MMM\x018\x00\x00\x00FILE_INF"):
-            print("Memory type: RAW\nThis script cannot work with RAW preloader.\nRAW preloader is not a full-fledged boot1 region and does not have an offset header, which this script works with.")
+            print("Memory type: RAW\n\nThis script cannot work with RAW preloader.\nRAW preloader is not a full-fledged boot1 region and does not have an offset header, which this script works with.")
             input("Press Enter to close: error 3")
             exit(3)
         else:
             print("Memory type: Unknown")
-            input("Press Enter to close: error 4")
-            exit(4)
+            choice = input("\nUnknown file type\nScript execution outcome may be unpredictable, continue? (y/n) ")
+            if choice.lower() != "y":    
+                input("Press Enter to close: error 4")
+                exit(4)
         
         return read_flag_block(file_size)
 
