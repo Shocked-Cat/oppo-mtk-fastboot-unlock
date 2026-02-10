@@ -110,7 +110,7 @@ def check_validation():
             print(f"Expected file size - 0x400000 byte, received size - {hex(file_size)}.")
             choice = input("Ignore this and continue? (y/n) ")
             if choice.lower() == "y":
-                print(f"continue with file with size difference {normal_file_size - file_size} byte")
+                print(f"continue with file with size difference {hex(normal_file_size - file_size)} byte")
             else:
                 input("Press Enter to close: error 2")
                 exit(2)
@@ -162,5 +162,3 @@ def copy_preloader():
 
 copy_preloader()
 input("Press Enter to close ")
-
-
