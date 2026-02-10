@@ -107,7 +107,7 @@ def read_flag_block(file_size: int):
 def check_validation():
         file_size = ndo.stat().st_size
         if file_size != normal_file_size:
-            print(f"Expected file size - {0x400000} byte, received size - {file_size}.")
+            print(f"Expected file size - 0x400000 byte, received size - {hex(file_size)}.")
             choice = input("Ignore this and continue? (y/n) ")
             if choice.lower() == "y":
                 print(f"continue with file with size difference {normal_file_size - file_size} byte")
@@ -162,4 +162,5 @@ def copy_preloader():
 
 copy_preloader()
 input("Press Enter to close ")
+
 
