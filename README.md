@@ -2,6 +2,14 @@
 The script in this repository is designed to create a modified *preloader* based on the factory one, 
 in which the fastboot lock flag is changed to unlocked.
 
+## General information
+This modification method preloads most of the preloader in a semblance of an engineering method.
+
+Everything is done thanks to a small deception, the preloader exploit. The SBC (Secure Boot Check) state can only be manipulated, provided that SBC: True, and provided that it is enabled via m_sec_boot. There are rare exceptions that need to be investigated.
+
+It is impossible to fully edit RAW without verification, I don't know how to implement it. That is why this repository will not help you bypass LK verification on many Oppo
+
+
 ---
 
 ## Instructions
