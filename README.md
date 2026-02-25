@@ -70,17 +70,19 @@ On the Russian 4pda forum, user Max_Goblin provides very detailed [instructions]
 | Oppo A56 5G        | PFVM110            | Dimensity 700      | MT6833            | MTKClient: Full support                                                        |
 | Oppo A58 4G        | CPH2577            | Helio G85          | MT6768/MT6769     | Problems DAA gui and cmd, auth_sv5.auth not tested                             |
 | Oppo A58x          | PHJ110             | Dimensity 700      | MT6833            | GeekFlashTool: only 12 Android support; [O+ Support Tool]: Full support        |
-| Oppo A73 5G        | CPH2161            | Dimensity 720      | MT6853            | GUI support, to work without GUI, auth_sv5.auth is required.                   |
+| Oppo A73 5G        | CPH2161            | Dimensity 720      | MT6853            | MTKClient GUI  support, to work without GUI, auth_sv5.auth is required.        |
+| Oppo A93s          | PFGM00             | Dimensity 700      | MT6833            | MTKClient: Full support                                                        |
 | OPPO F31 Pro 5G    | CPH2763            | Dimensity 7300     | MT6878            | [O+ Support Tool]: support; The patch didn't work for unknown reasons.         |
 | Oppo Pad 2         | OPD2201            | Dimensity 9000     | MT6983            | GeekFlashTool: Full support                                                    |
 | Oppo Reno 10 5g    | CPH2531            | Dimensity 7050     | MT6877V           | Problems DAA gui and cmd, auth_sv5.auth not tested                             |
 | Oppo Reno 11F 5g   | CPH2603            | Dimensity 7050     | MT6877V           | Problems DAA gui and cmd, auth_sv5.auth not tested                             |
+| Oppo Reno 3 5G     | CPH2125            | Dimensity 1000L    | MT6885            | MTKClient: Full support                                                        |
 | Oppo Reno 4 Lite   | CPH2125            | Helio P95          | MT6779            | MTKClient: Full support                                                        |
 | Oppo Reno 5 Lite   | CPH2205            | Helio P95          | MT6779            | MTKClient: Full support                                                        |
-| Oppo Reno 5 Z      | CPH2211            | Dimensity 800U     | MT6853            | MTKClient + [DA](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/DA_BR_MT6853.bin): Full support                                                     |
+| Oppo Reno 5 Z      | CPH2211            | Dimensity 800U     | MT6853            | MTKClient + [DA](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/DA_BR_MT6853.bin): Full support                                                    |
 
 #### Ready-made preloaders are available on 4pda.
-#### Problems with DAA don't necessarily mean unlocking isn't supported, especially if auth_sv5.auth hasn't been tested. For Oppo, it's usually simply impossible to find a valid DA, but I recommend trying.
-#### If you've unlocked the bootloader of any Oppo device using mtkclient and this patch, please create an issue and let me know which new Oppo device this method worked for, preferably providing the stock preloader and the patched one. Alternatively, you can report that this method didn't work. You can also contact me on Telegram.
+#### Issues with DAA do not necessarily mean that unlocking is not supported, especially if auth_sv5.auth has not been tested. You can try different programs besides mtkclient
+#### If you have unlocked the bootloader of any Oppo device with this patch, please create a problem and let us know which new Oppo device this method worked for, preferably providing a standard preloader and patch, as well as mention the Android version, and what software you used to read and write the preloader. Alternatively, you can report that this method did not work. You can also contact me via Telegram.
 ---
 ## This project is licensed under the AGPL-3.0 License. See the [LICENSE](LICENSE) file for details.
