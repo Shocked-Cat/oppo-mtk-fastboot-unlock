@@ -5,9 +5,7 @@ The script in this repository is designed to create a modified *preloader* based
 in which the fastboot lock flag is changed to unlocked.
 
 ## General information
-Upgrading via OTA will overwrite your preloader, but if you've used this repository as intended, you'll only have fastboot blocked, without turning your device into a brick.
-
-You can also update the RAW part of the preloader yourself, and this should not cause problems, but be careful, as updating the RAW may add additional locks or fixes. And also updating from Android 14 to Android 15 can entail an unpredictable result.
+It has been discovered that on Realme devices, after flashing the modified preloader in fastboot, it is no longer possible to enter using the buttons
 
 This modification method preloads most of the preloader in a semblance of an engineering method.
 
@@ -85,8 +83,9 @@ On the Russian 4pda forum, user Max_Goblin provides very detailed [instructions]
 | Oppo Reno 4 Lite   | CPH2125            | Helio P95          | MT6779            | MTKClient: Full support                                                        |
 | Oppo Reno 5 Lite   | CPH2205            | Helio P95          | MT6779            | MTKClient: Full support                                                        |
 | Oppo Reno 5 Z      | CPH2211            | Dimensity 800U     | MT6853            | MTKClient + [DA](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/DA_BR_MT6853.bin): Full support                                                                                                                                     |
-| Realme 12 Plus     | RMX3867            | Dimensity 7050     | MT6877            | MTKClient + [DA MT6877](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/): bsupport, patch did not unlock fastboot probably due to Android 15+, SBC status not known                                                                           |
+| Realme 12 Plus     | RMX3867            | Dimensity 7050     | MT6877            | MTKClient + [DA MT6877](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/): support, patch did not unlock fastboot, probably due to Android 15+, Android 14 not tested, SBC status unknown                                                      |
 | Realme GT Neo      | RMX3031            | Dimensity 1200     | MT6893            | GeekFlashTool: Full support                                                    |
+| Realme V11 5G      | RMX3121 & RMX3122  | Dimensity 700      | MT6833            | GeekFlashTool: Full support                                                    |
 
 #### Ready-made preloaders are available on 4pda.
 #### Issues with DAA do not necessarily mean that unlocking is not supported, especially if auth_sv5.auth has not been tested. You can try different programs besides mtkclient
@@ -102,6 +101,8 @@ Changing the preloader or flashing the altered images carries a **high risk of p
 * You are solely responsible for any consequences resulting from the use, misuse, or inability to use this software.
 * The maintainers and contributors of this project are **not liable for any damage**, data loss, device malfunction, or legal issues that may arise.
 * This project is intended for **educational and research purposes only**. It is **not intended for illegal or unauthorized use**.
+*Upgrading via OTA will overwrite your preloader, but if you've used this repository as intended, you'll only have fastboot blocked, without turning your device into a brick.
+*You can also update the RAW part of the preloader yourself, and this should not cause problems, but be careful, as updating the RAW may add additional locks or fixes. And also updating from Android 14 to Android 15 can entail an unpredictable result.
 
 Proceed only if you fully understand the risks and implications.
 
