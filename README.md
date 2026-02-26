@@ -5,6 +5,10 @@ The script in this repository is designed to create a modified *preloader* based
 in which the fastboot lock flag is changed to unlocked.
 
 ## General information
+Upgrading via OTA will overwrite your preloader, but if you've used this repository as intended, you'll only have fastboot blocked, without turning your device into a brick.
+
+You can also update the RAW part of the preloader yourself, and this should not cause problems, but be careful, as updating the RAW may add additional locks or fixes. And also updating from Android 14 to Android 15 can entail an unpredictable result.
+
 This modification method preloads most of the preloader in a semblance of an engineering method.
 
 Everything is done thanks to a small deception, the preloader exploit. The SBC (Secure Boot Check) state can only be manipulated, provided that SBC: True, and provided that it is enabled via m_sec_boot. There are rare exceptions that need to be investigated.
@@ -73,16 +77,31 @@ On the Russian 4pda forum, user Max_Goblin provides very detailed [instructions]
 | Oppo A73 5G        | CPH2161            | Dimensity 720      | MT6853            | MTKClient GUI  support, to work without GUI, auth_sv5.auth is required.        |
 | Oppo A93s          | PFGM00             | Dimensity 700      | MT6833            | MTKClient: Full support                                                        |
 | OPPO F31 Pro 5G    | CPH2763            | Dimensity 7300     | MT6878            | [O+ Support Tool]: support; The patch didn't work for unknown reasons.         |
+| Oppo K9 Pro        | PEYM00             | Dimensity 1200     | MT6893            | GeekFlashTool: Full support                                                    |
 | Oppo Pad 2         | OPD2201            | Dimensity 9000     | MT6983            | GeekFlashTool: Full support                                                    |
 | Oppo Reno 10 5g    | CPH2531            | Dimensity 7050     | MT6877V           | Problems DAA gui and cmd, auth_sv5.auth not tested                             |
 | Oppo Reno 11F 5g   | CPH2603            | Dimensity 7050     | MT6877V           | Problems DAA gui and cmd, auth_sv5.auth not tested                             |
 | Oppo Reno 3 5G     | CPH2125            | Dimensity 1000L    | MT6885            | MTKClient: Full support                                                        |
 | Oppo Reno 4 Lite   | CPH2125            | Helio P95          | MT6779            | MTKClient: Full support                                                        |
 | Oppo Reno 5 Lite   | CPH2205            | Helio P95          | MT6779            | MTKClient: Full support                                                        |
-| Oppo Reno 5 Z      | CPH2211            | Dimensity 800U     | MT6853            | MTKClient + [DA](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/DA_BR_MT6853.bin): Full support                                                    |
+| Oppo Reno 5 Z      | CPH2211            | Dimensity 800U     | MT6853            | MTKClient + [DA](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/DA_BR_MT6853.bin): Full support                                                                                                                                     |
+| Realme 12 Plus     | RMX3867            | Dimensity 7050     | MT6877            | MTKClient + [DA MT6877](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/): bsupport, patch did not unlock fastboot probably due to Android 15+, SBC status not known                                                                           |
+| Realme GT Neo      | RMX3031            | Dimensity 1200     | MT6893            | GeekFlashTool: Full support                                                    |
 
 #### Ready-made preloaders are available on 4pda.
 #### Issues with DAA do not necessarily mean that unlocking is not supported, especially if auth_sv5.auth has not been tested. You can try different programs besides mtkclient
 #### If you have unlocked the bootloader of any Oppo device with this patch, please create a problem and let us know which new Oppo device this method worked for, preferably providing a standard preloader and patch, as well as mention the Android version, and what software you used to read and write the preloader. Alternatively, you can report that this method did not work. You can also contact me via Telegram.
 ---
 ## This project is licensed under the AGPL-3.0 License. See the [LICENSE](LICENSE) file for details.
+---
+## Disclaimer
+
+This software is provided **"as is"** without any warranty of any kind, express or implied. By using this tool, you acknowledge that:
+Changing the preloader or flashing the altered images carries a **high risk of permanent damage to the device** ("brick").
+* Changing the preloader or flashing the altered images carries a **high risk of permanent damage to the device** (bricking).
+* You are solely responsible for any consequences resulting from the use, misuse, or inability to use this software.
+* The maintainers and contributors of this project are **not liable for any damage**, data loss, device malfunction, or legal issues that may arise.
+* This project is intended for **educational and research purposes only**. It is **not intended for illegal or unauthorized use**.
+
+Proceed only if you fully understand the risks and implications.
+
