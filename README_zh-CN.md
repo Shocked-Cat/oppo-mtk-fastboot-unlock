@@ -1,38 +1,45 @@
-# Fastboot 解锁工具 — Oppo 联发科（通用）Bootloader 解锁方案
-本仓库中的脚本用于基于设备原厂预加载器（preloader）制作修改版镜像，将其中的 Fastboot 锁定标志位修改为解锁状态。
+## 翻译协助来自 [MengWanYu](https://github.com/MengWanYu)
 
-## 概述
-该修改方案以类工程模式的思路，对预加载器主体进行处理。
-全部功能基于一个预加载器漏洞利用技巧实现。仅当 **SBC（安全启动校验，Secure Boot Check）状态为开启（True）**，且通过 `m_sec_boot` 完成启用时，才可对 SBC 状态进行修改。存在少量例外情况，仍需进一步研究验证。
+# 解锁Fastboot——OPPO MediaTek (通用版) 解锁Bootloader
 
-在不通过签名校验的情况下，无法对 RAW 数据进行完整编辑，目前我也未找到实现方法。
-因此本方案**无法帮你绕过多数 Oppo 机型的 LK 校验**。
+本仓库中的脚本用于基于原厂preloader制作修改版，将其中的fastboot锁定标识修改为解锁状态。
 
----
+## 通用说明
 
-## 使用步骤
-* 下载并安装 [Python](https://www.python.org/downloads) 3.4 及以上版本（MTKclient 推荐使用 3.10-3.13 版本）
-* 使用 [mtkclient](https://github.com/bkerler/mtkclient)（含图形界面）、[GeekFlashTool](https://gitee.com/geekflashtool) 或 [Penumbra](https://github.com/shomykohai/penumbra)，从你的 Oppo 设备中读取预加载器（boot1）镜像备份
-* 将预加载器备份放到与 `preloader_path.py` 同级的目录中，并重命名为 `boot1.bin`
-* 双击运行该 Python 脚本
-* 脚本运行完成后，修改完成的预加载器镜像将生成在 `preloader_path` 文件夹内，文件名为 `boot1.bin`
-* 使用上述支持的工具，将生成的 `boot1.bin` 刷入设备
-* 务必在设备开发者选项中开启 **OEM 解锁**
-* 使用 ADB 命令进入已解锁的 Fastboot 模式：
-  ```
-  adb reboot bootloader
-  ```
-* 进入 Fastboot 模式后，执行 Bootloader 解锁命令：
-  ```
-  fastboot flashing unlock
-  ```
-* 按设备屏幕上的提示，通过音量上键或音量下键确认 Bootloader 解锁操作
-* 恭喜你，终于完成了 Bootloader 解锁的全部流程
+经实测发现，Realme设备在fastboot模式下刷入修改版preloader后，将无法通过物理按键进入相关模式。
 
----
+本修改方法以类工程模式的方式加载大部分preloader，整个操作均通过preloader漏洞这一“小技巧”实现。仅当SBC（Secure Boot Check）为开启状态（SBC: True）且通过m_sec_boot启用时，才可对SBC状态进行操作，极少数特殊情况仍需进一步验证。
 
-## 补丁生成成功的日志示例
-```
+目前无法在无校验的情况下对RAW进行完整编辑，相关实现方法暂未攻克，因此本仓库方案无法帮助你绕过多款OPPO设备的LK校验。
+
+## 操作步骤
+
+1. 下载并安装Python 3.4+版本（mtkclient建议使用3.10-3.13版本）
+
+2. 使用mtkclient（含图形界面）、GeekFlashTool或Penumbra，从你的OPPO设备中读取preloader（boot1）镜像文件
+
+3. 将preloader备份文件放入preloader_path.py同目录下，并重命名为boot1.bin
+
+4. 双击运行该Python脚本
+
+5. 脚本运行完成后，修改后的preloader将保存在preloader_path文件夹中，文件名为boot1.bin
+
+6. 使用兼容工具将生成的boot1刷入设备
+
+7. 务必在开发者选项中开启OEM Unlock功能
+
+8. 通过ADB执行「adb reboot bootloader」命令，进入解锁后的fastboot模式
+
+9. 进入fastboot后，执行「fastboot flashing unlock」命令
+
+10. 按下音量上键/下键确认解锁Bootloader，操作前请仔细查看设备屏幕的解锁提示文字
+
+11. 完成以上步骤，即可结束Bootloader解锁的操作流程
+
+## 补丁制作成功的日志示例
+
+```Plain Text
+
 Dev. Max_Goblin - 4pda
 boot1.bin found state: successfully
 Memory type: EMMC_BOOT
@@ -56,39 +63,64 @@ Press Enter to close
 ```
 
 ## 补充说明
-俄罗斯 4PDA 论坛用户 **Max_Goblin** 提供了超详细的[图文教程](https://4pda.to/forum/index.php?showtopic=1059838&view=findpost&p=136154776)，内容包括：Windows 系统下 mtkclient 的完整安装步骤、设备分区备份与恢复方法、图形界面详细使用指南，以及手动制作 preloader 补丁的完整教程。
 
----
+俄罗斯4pda论坛的用户Max_Goblin提供了超详细的操作教程，包含Windows系统下mtkclient的完整安装、备份的创建与恢复、图形界面的详细使用，以及手动制作preloader补丁的方法，教程链接：[https://4pda.to/forum/index.php?showtopic=1059838&view=findpost&p=136154776](https://4pda.to/forum/index.php?showtopic=1059838&view=findpost&p=136154776)
 
-## 支持设备列表
-| 机型                | 设备代号             | 芯片平台           | SoC ID         | 支持状态                                                                 |
-|---------------------|----------------------|--------------------|----------------|--------------------------------------------------------------------------|
-| Oppo A9X            | PCEM00 & PCET00      | Helio P70          | MT6771         | MTKClient：完整支持                                                      |
-| Oppo A15            | CPH2185              | Helio P35          | MT6765         | SBC 已启用，但补丁无效                                                   |
-| Oppo A17            | CPH2477              | Helio G35          | MT6765         | MTKClient：完整支持                                                      |
-| Oppo A17            | CPH2477              | Helio G35          | MT6765         | MTKClient：完整支持                                                      |
-| Oppo A17K           | CPH2471              | Helio G35          | MT6765         | MTKClient：完整支持                                                      |
-| Oppo A18            | CPH2591              | Helio G85          | MT6768/MT6769  | 图形界面与命令行存在 DAA 相关问题，已完成 auth_sv5.auth 适配测试       |
-| Oppo A35            | PEFM00               | Helio P35          | MT6765         | SBC 未启用，不支持本方案                                                 |
-| Oppo A54 4G         | CPH2239              | Helio G35          | MT6765         | 图形界面与命令行存在 DAA 相关问题，未完成 auth_sv5.auth 适配测试       |
-| Oppo A55 4G         | CPH2325              | Helio G35          | MT6765         | MTKClient：完整支持                                                      |
-| Oppo A55 5G         | CPHPEMM00 & PEMT00   | Dimensity 700      | MT6833         | GeekFlashTool：完整支持                                                  |
-| Oppo A56 5G         | PFVM110              | Dimensity 700      | MT6833         | MTKClient：完整支持                                                      |
-| Oppo A58 4G         | CPH2577              | Helio G85          | MT6768/MT6769  | 图形界面与命令行存在 DAA 相关问题，未完成 auth_sv5.auth 适配测试       |
-| Oppo A58x           | PHJ110               | Dimensity 700      | MT6833         | GeekFlashTool：仅支持 Android 12；[O+ Support Tool]：完整支持          |
-| Oppo A73 5G         | CPH2161              | Dimensity 720      | MT6853         | 支持图形界面操作；无图形界面操作需搭配 auth_sv5.auth 使用               |
-| OPPO F31 Pro 5G     | CPH2763              | Dimensity 7300     | MT6878         | [O+ Support Tool]：支持；未知原因导致补丁无效                            |
-| Oppo Pad 2          | OPD2201              | Dimensity 9000     | MT6983         | GeekFlashTool：完整支持                                                  |
-| Oppo Reno 10 5g     | CPH2531              | Dimensity 7050     | MT6877V        | 图形界面与命令行存在 DAA 相关问题，未完成 auth_sv5.auth 适配测试       |
-| Oppo Reno 11F 5g    | CPH2603              | Dimensity 7050     | MT6877V        | 图形界面与命令行存在 DAA 相关问题，未完成 auth_sv5.auth 适配测试       |
-| Oppo Reno 4 Lite    | CPH2125              | Helio P95          | MT6779         | MTKClient：完整支持                                                      |
-| Oppo Reno 5 Lite    | CPH2205              | Helio P95          | MT6779         | MTKClient：完整支持                                                      |
+## 设备支持情况
 
-#### 4PDA 论坛已提供现成的预加载器修改镜像。
-#### 出现 DAA 相关问题，不代表设备一定不支持解锁，尤其是未测试 auth_sv5.auth 的情况下。对于 Oppo 机型，通常只是难以找到可用的 DA 文件，仍建议尝试。
-#### 如果你通过 mtkclient 和本补丁成功解锁了任意 Oppo 设备的 Bootloader，欢迎提交 Issue 告知适配成功的新机型，建议一并提供原厂预加载器和修改后的补丁文件。你也可以反馈本方案无效的机型情况，或通过 Telegram 联系我。
+|机型|设备代码|SoC|SoC ID|支持状态|
+|---|---|---|---|---|
+|Oppo A9X|PCEM00 & PCET00.|Helio P70|MT6771|MTKClient: 完全支持|
+|Oppo A15|CPH2185|Helio P35|MT6765|SBC开启，但补丁无效|
+|Oppo A17|CPH2477|Helio G35|MT6765|MTKClient: 完全支持|
+|Oppo A17K|CPH2471|Helio G35|MT6765|MTKClient: 完全支持|
+|Oppo A18|CPH2591|Helio G85|MT6768/MT6769|DAA图形界面及命令行存在问题，已测试auth_sv5.auth|
+|Oppo A35|PEFM00|Helio P35|MT6765|SBC未开启，暂不支持|
+|Oppo A54 4G|CPH2239|Helio G35|MT6765|DAA图形界面及命令行存在问题，未测试auth_sv5.auth|
+|Oppo A55 4G|CPH2325|Helio G35|MT6765|Mtkclient: 完全支持|
+|Oppo A55 5G|CPHPEMM00 & PEMT00|Dimensity 700|MT6833|GeekFlashTool: 完全支持|
+|Oppo A56 5G|PFVM110|Dimensity 700|MT6833|MTKClient: 完全支持|
+|Oppo A58 4G|CPH2577|Helio G85|MT6768/MT6769|DAA图形界面及命令行存在问题，未测试auth_sv5.auth|
+|Oppo A58x|PHJ110|Dimensity 700|MT6833|GeekFlashTool: 仅支持Android 12；[O+ Support Tool]: 完全支持|
+|Oppo A73 5G|CPH2161|Dimensity 720|MT6853|MTKClient 图形界面支持；无图形界面运行需auth_sv5.auth|
+|Oppo A93s|PFGM00|Dimensity 700|MT6833|MTKClient: 完全支持|
+|OPPO F31 Pro 5G|CPH2763|Dimensity 7300|MT6878|[O+ Support Tool]: 支持；补丁无效，原因未知|
+|Oppo K9 Pro|PEYM00|Dimensity 1200|MT6893|GeekFlashTool: 完全支持|
+|Oppo Pad 2|OPD2201|Dimensity 9000|MT6983|GeekFlashTool: 完全支持|
+|Oppo Reno 10 5g|CPH2531|Dimensity 7050|MT6877V|DAA图形界面及命令行存在问题，未测试auth_sv5.auth|
+|Oppo Reno 11F 5g|CPH2603|Dimensity 7050|MT6877V|DAA图形界面及命令行存在问题，未测试auth_sv5.auth|
+|Oppo Reno 3 5G|CPH2125|Dimensity 1000L|MT6885|MTKClient: 完全支持|
+|Oppo Reno 4 Lite|CPH2125|Helio P95|MT6779|MTKClient: 完全支持|
+|Oppo Reno 5 Lite|CPH2205|Helio P95|MT6779|MTKClient: 完全支持|
+|Oppo Reno 5 Z|CPH2211|Dimensity 800U|MT6853|MTKClient + [DA](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/DA_BR_MT6853.bin): 完全支持|
+|Realme 12 Plus|RMX3867|Dimensity 7050|MT6877|MTKClient + [DA MT6877](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/): 支持；补丁无法解锁fastboot，疑似因Android 15+，Android 14未测试，SBC状态未知|
+|Realme GT Neo|RMX3031|Dimensity 1200|MT6893|GeekFlashTool: 完全支持|
+|Realme V11 5G|RMX3121 & RMX3122|Dimensity 700|MT6833|GeekFlashTool: 完全支持|
+#### 4pda论坛提供现成的preloader文件
 
----
+#### DAA出现问题不代表无法解锁，尤其是未测试auth_sv5.auth的情况，可尝试mtkclient之外的其他工具
 
-## 许可协议
-本项目采用 **AGPL-3.0** 开源许可协议。详见 [LICENSE](LICENSE) 文件了解完整许可条款。
+#### 若通过本补丁成功解锁任意OPPO设备的Bootloader，欢迎提交Issue反馈，注明解锁的新机型；建议同时提供原厂preloader、制作的补丁，说明设备的Android版本及读写preloader所用的工具。若解锁失败，也可进行反馈，也可通过Telegram与我联系。
+
+## 协议说明
+
+本项目基于AGPL-3.0协议授权，详细条款见[LICENSE](LICENSE)文件。
+
+## 免责声明
+
+本软件按**现状**提供，不承担任何明示或默示的担保责任。使用本工具即表示你认可以下条款：
+
+- 修改preloader或刷入修改后的镜像文件，存在设备**永久损坏（变砖）**的高风险。
+
+- 因使用、误用或无法使用本软件产生的任何后果，均由你自行承担全部责任。
+
+- 本项目的维护者和贡献者，对由此产生的任何设备损坏、数据丢失、设备故障或法律问题，**不承担任何赔偿责任**。
+
+- 本项目仅用于**教育和研究目的**，**禁止用于非法或未授权的用途**。
+
+- 设备通过OTA升级将覆盖修改后的preloader，但若按本仓库说明规范操作，仅会导致fastboot被重新锁定，不会造成设备变砖。
+
+- 不要更新preloader的RAW部分！有机器已经报告产生问题，如果你需要升级系统，请提前使用mtk工具还原BOOT_1和BOOT_2；此外，从Android 14升级至Android 15可能会产生不可预测的结果。
+
+请在充分理解所有风险和影响后再进行操作。
+
