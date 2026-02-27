@@ -101,6 +101,7 @@ Changing the preloader or flashing the altered images carries a **high risk of p
 * You are solely responsible for any consequences resulting from the use, misuse, or inability to use this software.
 * The maintainers and contributors of this project are **not liable for any damage**, data loss, device malfunction, or legal issues that may arise.
 * This project is intended for **educational and research purposes only**. It is **not intended for illegal or unauthorized use**.
+* Applying this patch on Android 15+ does not unlock fastboot, and is generally poorly researched. Act only with complete confidence in your own actions
 * Upgrading via OTA will overwrite your preloader, but if you've used this repository as intended, you'll only have fastboot blocked, without turning your device into a brick.
 * You can also update the RAW part of the preloader yourself, and this should not cause problems, but be careful, as updating the RAW may add additional locks or fixes. And also updating from Android 14 to Android 15 can entail an unpredictable result.
 
