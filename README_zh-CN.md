@@ -41,6 +41,7 @@
 ```Plain Text
 
 Dev. Max_Goblin - 4pda
+Mode: Default
 boot1.bin found state: successfully
 Memory type: EMMC_BOOT
 Flag block find state: successfully
