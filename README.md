@@ -32,6 +32,7 @@ It is impossible to fully edit RAW without verification, I don't know how to imp
 ## Example of a log of a successful patch creation
 ```
 Dev. Max_Goblin - 4pda
+Mode: Default
 boot1.bin found state: successfully
 Memory type: EMMC_BOOT
 Flag block find state: successfully
