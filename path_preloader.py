@@ -1,10 +1,10 @@
 from pathlib import Path
 from os import makedirs
 from sys import exit
+import argparse
 
 normal_file_size = 4 * 1024 * 1024
-ndo = Path("boot1.bin")
-ndc = Path("preloader_path/boot1.bin")
+
 print("Dev. Max_Goblin - 4pda")
 
 def auto_path_preloader(flag: bytes, fastboot_lock_state: bytes, file_size: int):
@@ -63,12 +63,12 @@ def auto_path_preloader(flag: bytes, fastboot_lock_state: bytes, file_size: int)
         f.seek((0x1000))
         f.write(flag)
 
-        # Path flag to unlock fastboot
+        # Change flag to unlock fastboot
         print(f"Fastboot lock state: 0x{fastboot_lock_state[0]:02x} -> 00")
         f.seek(0x104C)
         f.write(b"\x00")
 
-    print("Create new preloader to: {}".format(Path("preloader_path/boot1.bin").resolve()))
+    print("Create new preloader to: {}".format(ndc.resolve()))
 
 def read_flag_block(file_size: int):
     pattern_flag = bytes.fromhex("41 4E 44 5F 52 4F 4D 49 4E 46 4F 5F 76")
@@ -92,8 +92,10 @@ def read_flag_block(file_size: int):
 
         if hex(fastboot_lock_state[0]) == "0x22":
             print("lock state: 22 (lock)")
+        elif hex(fastboot_lock_state[0]) == "0x11":
+            print("lock state: 11 (hard lock)")
         else:
-             print("lock state: unlock")
+            print(f"lock state: {fastboot_lock_state[0]} (unlock)")
 
         return auto_path_preloader(flag, fastboot_lock_state, file_size)
 
@@ -123,8 +125,8 @@ def check_validation():
             input("Press Enter to close: error 3")
             exit(3)
         else:
-            print("Memory type: Unknown")
-            choice = input("\nUnknown file type\nScript execution outcome may be unpredictable, continue? (y/n) ")
+            print(f"Memory type: {magic_sign} (Unknown)")
+            choice = input("\nScript execution outcome may be unpredictable, continue? (y/n) ")
             if choice.lower() != "y":    
                 input("Press Enter to close: error 4")
                 exit(4)
@@ -139,12 +141,12 @@ def copy_preloader():
                 with open(ndc, "wb") as f_ndc:
                     f_ndc.write(f_ndo.read())
 
-            print("boot1.bin found state: successfully")
+            print(f"{ndo.name} found state: successfully")
 
             break
 
         except FileNotFoundError:
-            print("boot1.bin found state: fail\nPlease use mtkclient to read your preloader (boot1).")
+            print(f"{ndo.name} found state: fail\nPlease use mtkclient to read your preloader {ndo.name}.")
             choice = input("Repeat search? (y/n) ")
             if choice.lower() != "y":
                 input("Press Enter to close: error 1")
@@ -152,5 +154,43 @@ def copy_preloader():
 
     return check_validation()
 
-copy_preloader()
-input("Press Enter to close ")
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Script for modifying the factory preloader to provide access to fastboot."
+    )
+    parser.add_argument(
+        "file",
+        nargs="?",
+        default=None,
+        help="The path or name of the preloader input file. Defaults to boot1.bin."
+    )
+    parser.add_argument(
+        "output",
+        nargs="?",
+        default=None,
+        help="The output file name (result in preloader_path/). By default, it matches the input file name."
+    )
+    args = parser.parse_args()
+    return args.file, args.output
+
+
+def main():
+    global ndo, ndc
+    source, output_name = parse_args()
+
+    if source is None:
+        ndo = Path("boot1.bin")
+        ndc = Path("preloader_path/boot1.bin")
+        print("Mode: Default")
+    else:
+        ndo = Path(source)
+        out_file = output_name if output_name is not None else ndo.name
+        ndc = Path("preloader_path") / out_file
+        print("Mode: CLI")
+
+    copy_preloader()
+    input("Press Enter to close ")
+
+if __name__ == "__main__":
+    main()
