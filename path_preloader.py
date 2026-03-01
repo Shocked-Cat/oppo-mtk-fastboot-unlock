@@ -85,7 +85,7 @@ def read_flag_block(file_size: int):
             choice  = input("Do you wish to continue without the flag block? (y/n) ")
             if choice.lower() == "y":
                 flag = b""
-                fastboot_lock_state = 0x0
+                fastboot_lock_state = b'\x00'
             else:
                 input("Press Enter to close: error 5")
                 exit(5)
@@ -194,3 +194,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
