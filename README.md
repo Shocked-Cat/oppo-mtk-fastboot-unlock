@@ -60,7 +60,7 @@ On the Russian 4pda forum, user Max_Goblin provides very detailed [instructions]
 ## Information about supported devices
 | Model              | Device code        | SoC                | SoC ID            | Status                                                                         |
 |--------------------|--------------------|--------------------|-------------------|--------------------------------------------------------------------------------|
-| Oppo A9X           | PCEM00 & PCET00.   | Helio P70          | MT6771            | MTKClient: Full support                                                        |
+| Oppo A9X           | PCEM00 & PCET00    | Helio P70          | MT6771            | MTKClient: Full support                                                        |
 | Oppo A15           | CPH2185            | Helio P35          | MT6765            | SBC enabled, but patch doesn't work                                            |
 | Oppo A17           | CPH2477            | Helio G35          | MT6765            | MTKClient: Full support                                                        |
 | Oppo A17           | CPH2477            | Helio G35          | MT6765            | MTKClient: Full support                                                        |
@@ -86,6 +86,7 @@ On the Russian 4pda forum, user Max_Goblin provides very detailed [instructions]
 | Oppo Reno 5 Z      | CPH2211            | Dimensity 800U     | MT6853            | MTKClient + [DA](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/DA_BR_MT6853.bin): Full support                                                                                                                                     |
 | Realme 12 Plus     | RMX3867            | Dimensity 7050     | MT6877            | MTKClient + [DA MT6877](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/): support, patch did not unlock fastboot, probably due to Android 15+, Android 14 not tested, SBC status unknown                                                      |
 | Realme GT Neo      | RMX3031            | Dimensity 1200     | MT6893            | GeekFlashTool: Full support                                                    |
+| Realme GT Neo 2T   | RMX3357 & RE5469   | Dimensity 1200     | MT6893            | GeekFlashTool: Full support                                                    |
 | Realme V11 5G      | RMX3121 & RMX3122  | Dimensity 700      | MT6833            | GeekFlashTool: Full support                                                    |
 
 #### Ready-made preloaders are available on 4pda.
