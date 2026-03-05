@@ -90,12 +90,12 @@ def read_flag_block(file_size: int):
                 input("Press Enter to close: error 5")
                 exit(5)
 
-        if hex(fastboot_lock_state[0]) == "0x22":
+        if fastboot_lock_state[0] == 0x22:
             print("lock state: 22 (lock)")
-        elif hex(fastboot_lock_state[0]) == "0x11":
+        elif fastboot_lock_state[0] == 0x11:
             print("lock state: 11 (hard lock)")
         else:
-            print(f"lock state: {fastboot_lock_state[0]} (unlock)")
+            print(f"lock state: {hex(fastboot_lock_state[0])} (unlock)")
 
         return auto_path_preloader(flag, fastboot_lock_state, file_size)
 
