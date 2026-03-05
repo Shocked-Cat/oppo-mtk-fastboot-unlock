@@ -84,9 +84,11 @@ On the Russian 4pda forum, user Max_Goblin provides very detailed [instructions]
 | Oppo Reno 4 Lite   | CPH2125            | Helio P95          | MT6779            | MTKClient: Full support                                                        |
 | Oppo Reno 5 Lite   | CPH2205            | Helio P95          | MT6779            | MTKClient: Full support                                                        |
 | Oppo Reno 5 Z      | CPH2211            | Dimensity 800U     | MT6853            | MTKClient + [DA](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/DA_BR_MT6853.bin): Full support                                                                                                                                     |
+| Oppo Reno 6 5G     | CPH2251 & PEQM00   | Dimensity 900      | MT6877            | GeekFlashTool: Full support, mtkclient probably supports it too.               |
 | Realme 12 Plus     | RMX3867            | Dimensity 7050     | MT6877            | MTKClient + [DA MT6877](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/): support, patch did not unlock fastboot, probably due to Android 15+, Android 14 not tested, SBC status unknown                                                      |
 | Realme GT Neo      | RMX3031            | Dimensity 1200     | MT6893            | GeekFlashTool: Full support                                                    |
 | Realme GT Neo 2T   | RMX3357 & RE5469   | Dimensity 1200     | MT6893            | GeekFlashTool: Full support                                                    |
+| Realme Q2 Pro      | RMX2173            | Dimensity 800U     | MT6853            | MTKClient + [DA](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/DA_BR_MT6853.bin): Full support                                                    |
 | Realme V11 5G      | RMX3121 & RMX3122  | Dimensity 700      | MT6833            | GeekFlashTool: Full support                                                    |
 
 #### Ready-made preloaders are available on 4pda.
