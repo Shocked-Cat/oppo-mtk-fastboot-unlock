@@ -75,7 +75,7 @@ On the Russian 4pda forum, user Max_Goblin provides very detailed [instructions]
 | Oppo A58x          | PHJ110             | Dimensity 700      | MT6833            | GeekFlashTool: only 12 Android support; [O+ Support Tool]: Full support        |
 | Oppo A73 5G        | CPH2161            | Dimensity 720      | MT6853            | MTKClient GUI  support, to work without GUI, auth_sv5.auth is required.        |
 | Oppo A93s          | PFGM00             | Dimensity 700      | MT6833            | MTKClient: Full support                                                        |
-| OPPO F31 Pro 5G    | CPH2763            | Dimensity 7300     | MT6878            | [O+ Support Tool]: support; The patch didn't work for unknown reasons.         |
+| OPPO F31 Pro 5G    | CPH2763            | Dimensity 7300     | MT6878            | [O+ Support Tool]: support; Patch didn't work due to android 15+               |
 | Oppo K9 Pro        | PEYM00             | Dimensity 1200     | MT6893            | GeekFlashTool: Full support                                                    |
 | Oppo Pad 2         | OPD2201            | Dimensity 9000     | MT6983            | GeekFlashTool: Full support                                                    |
 | Oppo Reno 10 5g    | CPH2531            | Dimensity 7050     | MT6877V           | Problems DAA gui and cmd, auth_sv5.auth not tested                             |
