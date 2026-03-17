@@ -67,11 +67,13 @@ Press Enter to close
 | Oppo A58x              | PHJ110                      | Dimensity 700      | MT6833            | GeekFlashTool: only 12 Android support; [O+ Support Tool]: Full support         |
 | Oppo A73 5G            | CPH2161                     | Dimensity 720      | MT6853            | MTKClient: GUI  support, to work without GUI, auth_sv5.auth is required.        |
 | Oppo A93s              | PFGM00                      | Dimensity 700      | MT6833            | MTKClient: Full support                                                         |
-| OPPO F31 Pro 5G        | CPH2763                     | Dimensity 7300     | MT6878            | [O+ Support Tool]: support; The patch worked. How strange... Android 16 is not tested                                                                                                                                                                                        |
+| Oppo F31 Pro 5G        | CPH2763                     | Dimensity 7300     | MT6878            | [O+ Support Tool]: support; The patch worked. How strange... Android 16 is not tested      |
+| Oppo Find X8s          | PKT110                      | Dimensity 9400+    | MT6991            | [O+ Support Tool]: support; fastboot was not unlocked                           |
 | Oppo K9 Pro            | PEYM00                      | Dimensity 1200     | MT6893            | GeekFlashTool: Full support                                                     |
 | Oppo Pad 2             | OPD2201                     | Dimensity 9000     | MT6983            | GeekFlashTool: Full support                                                     |
 | Oppo Reno 10 5g        | CPH2531                     | Dimensity 7050     | MT6877V           | MTKClient: problems DAA gui and cmd, auth_sv5.auth not tested                   |
-| Oppo Reno 11F 5g       | CPH2603                     | Dimensity 7050     | MT6877V           | MTKClient: problems DAA gui and cmd, auth_sv5.auth not tested                   |
+| Oppo Reno 11 5g        | CPH2599                     | Dimensity 7050     | MT6877V           | MTKClient: problems DAA gui and cmd, auth_sv5.auth not tested                   |
+| Oppo Reno 11F 5g       | CPH2603                     | Dimensity 7050     | MT6877V           | MTKClient, Penumbra, UnlockTool: PLPort: Problems DAA; Brom: DA ARB problems. Patch is not tested                   |
 | Oppo Reno 3 5G         | CPH2125                     | Dimensity 1000L    | MT6885            | MTKClient: Full support                                                         |
 | Oppo Reno 4 Lite       | CPH2125                     | Helio P95          | MT6779            | MTKClient: Full support                                                         |
 | Oppo Reno 5 Lite       | CPH2205                     | Helio P95          | MT6779            | MTKClient: Full support                                                         |
