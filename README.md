@@ -72,8 +72,8 @@ Press Enter to close
 | Oppo K9 Pro            | PEYM00                      | Dimensity 1200     | MT6893            | GeekFlashTool: Full support                                                     |
 | Oppo Pad 2             | OPD2201                     | Dimensity 9000     | MT6983            | GeekFlashTool: Full support                                                     |
 | Oppo Reno 10 5g        | CPH2531                     | Dimensity 7050     | MT6877V           | MTKClient: problems DAA gui and cmd, auth_sv5.auth not tested                   |
-| Oppo Reno 11 5g        | CPH2599                     | Dimensity 7050     | MT6877V           | MTKClient: problems DAA gui and cmd, auth_sv5.auth not tested                   |
-| Oppo Reno 11F 5g       | CPH2603                     | Dimensity 7050     | MT6877V           | MTKClient, Penumbra, UnlockTool: PLPort: Problems DAA; Brom: DA ARB problems. Patch is not tested                   |
+| Oppo Reno 11 5g        | CPH2599                     | Dimensity 7050     | MT6877V           | MTKClient, Penumbra, UnlockTool: PLPort: Problems DAA; Brom: DA ARB problems. Patch is not tested                   |
+| Oppo Reno 11F 5g       | CPH2603                     | Dimensity 7050     | MT6877V           | MTKClient: problems DAA gui and cmd, auth_sv5.auth not tested                |
 | Oppo Reno 3 5G         | CPH2125                     | Dimensity 1000L    | MT6885            | MTKClient: Full support                                                         |
 | Oppo Reno 4 Lite       | CPH2125                     | Helio P95          | MT6779            | MTKClient: Full support                                                         |
 | Oppo Reno 5 Lite       | CPH2205                     | Helio P95          | MT6779            | MTKClient: Full support                                                         |
