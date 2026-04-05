@@ -55,7 +55,6 @@ Press Enter to close
 | Oppo A9X               | PCEM00 & PCET00             | Helio P70          | MT6771            | MTKClient: Full support                                                         |
 | Oppo A15               | CPH2185                     | Helio P35          | MT6765            | MTKClient: support, the patch did not open fastboot, only Android 10 was tested |
 | Oppo A17               | CPH2477                     | Helio G35          | MT6765            | MTKClient: Full support                                                         |
-| Oppo A17               | CPH2477                     | Helio G35          | MT6765            | MTKClient: Full support                                                         |
 | Oppo A17K              | CPH2471                     | Helio G35          | MT6765            | MTKClient: Full support                                                         |
 | Oppo A18               | CPH2591                     | Helio G85          | MT6768/MT6769     | MTKClient: problems DAA GUI and cmd, auth_sv5.auth tested                       |
 | Oppo A35               | PEFM00                      | Helio P35          | MT6765            | MTKClient: support, the patch did not open fastboot                             |
