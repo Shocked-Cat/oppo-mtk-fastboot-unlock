@@ -1,7 +1,7 @@
 | Model                  | Device code                 | SoC                | SoC ID            | Status                                                                          |
 |------------------------|-----------------------------|--------------------|-------------------|---------------------------------------------------------------------------------|
 | Oppo A3 (2018)         | PADM00                      | Helio P60          | MT6771            | MTKClient: Support, Android 10 is not supported for patching, perhaps downgrading to Android 8-9 will help                                                                                             |
-| Oppo A31 (2020)        | CPH2015 & CPH2029 & CPH2031 | Helio G35          | MT6765            | MTKClient: Support. The lk does not provide patch support, but Android 9 is probably not supported                                                                                                             |
+| Oppo A31 (2020)        | CPH2015 & CPH2029 & CPH2031 | Helio G35          | MT6765            | MTKClient: Support. The lk does not provide patch support, but Android 9 is probably not supported                                                                                                     |
 | Oppo A9X               | PCEM00 & PCET00             | Helio P70          | MT6771            | MTKClient: Full support                                                         |
 | Oppo A15               | CPH2185                     | Helio P35          | MT6765            | MTKClient: support, the patch did not open fastboot, only Android 10 was tested |
 | Oppo A17               | CPH2477                     | Helio G35          | MT6765            | MTKClient: Full support                                                         |
@@ -15,6 +15,7 @@
 | Oppo A58 4G            | CPH2577                     | Helio G85          | MT6768/MT6769     | MTKClient: problems DAA gui and cmd, auth_sv5.auth not tested                   |
 | Oppo A58x              | PHJ110                      | Dimensity 700      | MT6833            | GeekFlashTool: only 12 Android support; [O+ Support Tool]: Full support         |
 | Oppo A73 5G            | CPH2161                     | Dimensity 720      | MT6853            | MTKClient: GUI  support, to work without GUI, auth_sv5.auth is required.        |
+| Oppo A91               | PFGM00 & CPH2001 & CPH2021  | Helio P70          | MT6771            | MTKClient: Update to Android 11 required for support                                                                                                                                                   |
 | Oppo A93s              | PFGM00                      | Dimensity 700      | MT6833            | MTKClient: Full support                                                         |
 | Oppo F31 Pro 5G        | CPH2763                     | Dimensity 7300     | MT6878            | [O+ Support Tool]: support; The patch didn't work due to Android 15+.           |
 | Oppo Find X8s          | PKT110                      | Dimensity 9400+    | MT6991            | [O+ Support Tool]: support; fastboot was not unlocked                           |
