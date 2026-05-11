@@ -70,33 +70,7 @@ Press Enter to close
 ## 设备支持情况
 
 |机型|设备代码|SoC|SoC ID|支持状态|
-|---|---|---|---|---|
-|Oppo A9X|PCEM00 & PCET00.|Helio P70|MT6771|MTKClient: 完全支持|
-|Oppo A15|CPH2185|Helio P35|MT6765|SBC开启，但补丁无效|
-|Oppo A17|CPH2477|Helio G35|MT6765|MTKClient: 完全支持|
-|Oppo A17K|CPH2471|Helio G35|MT6765|MTKClient: 完全支持|
-|Oppo A18|CPH2591|Helio G85|MT6768/MT6769|DAA图形界面及命令行存在问题，已测试auth_sv5.auth|
-|Oppo A35|PEFM00|Helio P35|MT6765|SBC未开启，暂不支持|
-|Oppo A54 4G|CPH2239|Helio G35|MT6765|DAA图形界面及命令行存在问题，未测试auth_sv5.auth|
-|Oppo A55 4G|CPH2325|Helio G35|MT6765|Mtkclient: 完全支持|
-|Oppo A55 5G|CPHPEMM00 & PEMT00|Dimensity 700|MT6833|GeekFlashTool: 完全支持|
-|Oppo A56 5G|PFVM110|Dimensity 700|MT6833|MTKClient: 完全支持|
-|Oppo A58 4G|CPH2577|Helio G85|MT6768/MT6769|DAA图形界面及命令行存在问题，未测试auth_sv5.auth|
-|Oppo A58x|PHJ110|Dimensity 700|MT6833|GeekFlashTool: 仅支持Android 12；[O+ Support Tool]: 完全支持|
-|Oppo A73 5G|CPH2161|Dimensity 720|MT6853|MTKClient 图形界面支持；无图形界面运行需auth_sv5.auth|
-|Oppo A93s|PFGM00|Dimensity 700|MT6833|MTKClient: 完全支持|
-|OPPO F31 Pro 5G|CPH2763|Dimensity 7300|MT6878|[O+ Support Tool]: 支持；补丁无效，原因未知|
-|Oppo K9 Pro|PEYM00|Dimensity 1200|MT6893|GeekFlashTool: 完全支持|
-|Oppo Pad 2|OPD2201|Dimensity 9000|MT6983|GeekFlashTool: 完全支持|
-|Oppo Reno 10 5g|CPH2531|Dimensity 7050|MT6877V|DAA图形界面及命令行存在问题，未测试auth_sv5.auth|
-|Oppo Reno 11F 5g|CPH2603|Dimensity 7050|MT6877V|DAA图形界面及命令行存在问题，未测试auth_sv5.auth|
-|Oppo Reno 3 5G|CPH2125|Dimensity 1000L|MT6885|MTKClient: 完全支持|
-|Oppo Reno 4 Lite|CPH2125|Helio P95|MT6779|MTKClient: 完全支持|
-|Oppo Reno 5 Lite|CPH2205|Helio P95|MT6779|MTKClient: 完全支持|
-|Oppo Reno 5 Z|CPH2211|Dimensity 800U|MT6853|MTKClient + [DA](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/DA_BR_MT6853.bin): 完全支持|
-|Realme 12 Plus|RMX3867|Dimensity 7050|MT6877|MTKClient + [DA MT6877](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/): 支持；补丁无法解锁fastboot，疑似因Android 15+，Android 14未测试，SBC状态未知|
-|Realme GT Neo|RMX3031|Dimensity 1200|MT6893|GeekFlashTool: 完全支持|
-|Realme V11 5G|RMX3121 & RMX3122|Dimensity 700|MT6833|GeekFlashTool: 完全支持|
+[你可以在这里查看测试过的设备列表](https://github.com/Shocked-Cat/oppo-mtk-fastboot-unlock/blob/main/support_list.md)
 #### 4pda论坛提供现成的preloader文件
 
 #### DAA出现问题不代表无法解锁，尤其是未测试auth_sv5.auth的情况，可尝试mtkclient之外的其他工具
