@@ -11,7 +11,7 @@
 | Oppo A35               | PEFM00                      | Helio P35          | MT6765            | MTKClient: support, the patch did not open fastboot                             |
 | Oppo A54 4G            | CPH2239                     | Helio G35          | MT6765            | MTKClient: problems DAA GUI and cmd, auth_sv5.auth not tested                   |
 | Oppo A55 4G            | CPH2325                     | Helio G35          | MT6765            | MTKClient: Full support                                                         |
-| Oppo A55 5G            | CPHPEMM00 & PEMT00          | Dimensity 700      | MT6833            | GeekFlashTool: Full support                                                     |
+| Oppo A55 5G            | PEMM00 & PEMT00          | Dimensity 700      | MT6833            | GeekFlashTool: Full support                                                     |
 | Oppo A56 5G            | PFVM110                     | Dimensity 700      | MT6833            | MTKClient: Full support                                                         |
 | Oppo A58 4G            | CPH2577                     | Helio G85          | MT6768/MT6769     | MTKClient: problems DAA gui and cmd, auth_sv5.auth not tested                   |
 | Oppo A58x              | PHJ110                      | Dimensity 700      | MT6833            | GeekFlashTool: only 12 Android support; [O+ Support Tool]: Full support         |
