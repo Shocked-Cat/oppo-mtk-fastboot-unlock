@@ -51,8 +51,11 @@ Press Enter to close
 ## Information about supported devices
 [You can see the list of tested devices here](https://github.com/Shocked-Cat/oppo-mtk-fastboot-unlock/blob/main/support_list.md)
 
-#### Issues with DAA do not necessarily mean that unlocking is not supported, especially if auth_sv5.auth has not been tested. You can try different programs besides mtkclient
-#### If you have unlocked the bootloader of any Oppo device with this patch, please create a problem and let us know which new Oppo device this method worked for, preferably providing a standard preloader and patch, as well as mention the Android version, and what software you used to read and write the preloader. Alternatively, you can report that this method did not work. You can also contact me via Telegram.
+- Issues with DAA do not necessarily mean that unlocking is not supported, especially if auth_sv5.auth has not been tested. You can try different programs besides mtkclient
+
+- The auth_sv5.auth file can usually be easily extracted from official OFP or OZIP update files using oppo_decrypt
+
+- If you have unlocked the bootloader of any Oppo device with this patch, please create a problem and let us know which new Oppo device this method worked for, preferably providing a standard preloader and patch, as well as mention the Android version, and what software you used to read and write the preloader. Alternatively, you can report that this method did not work. You can also contact me via Telegram.
 
 ## Disclaimer
 
@@ -65,9 +68,6 @@ This software is provided **"as is"** without any warranty of any kind, express 
 * You can also update the RAW part of the preloader yourself, and this should not cause problems, but be careful, as updating the RAW may add additional locks or fixes. And also updating from Android 14 to Android 15 can entail an unpredictable result.
 
 Proceed only if you fully understand the risks and implications.
-
-## Additionally
-On the Russian 4pda forum, user Max_Goblin provides very detailed [instructions](https://4pda.to/forum/index.php?showtopic=1059838&view=findpost&p=136154776), including detailed installation of mtkclient for Windows, creating and restoring backups, a detailed description of using the graphical interface, and instructions for manually creating a patch for the preloader.
 
 ---
 ## This project is licensed under the AGPL-3.0 License. See the [LICENSE](LICENSE) file for details.
