@@ -5,7 +5,7 @@
 | Oppo A9X               | PCEM00 & PCET00             | Helio P70          | MT6771            | MTKClient: Full support                                                         |
 | Oppo A15               | CPH2185                     | Helio P35          | MT6765            | MTKClient: support, the patch did not open fastboot, only Android 10 was tested |
 | Oppo A16               | CPH2269                     | Helio P35          | MT6765            | MTKClient + [DA](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/DA_BR_MT6765_20271.bin): Full support                        |
-| Oppo A16k              | CPH2349                     | Helio P35          | MT6765            | MTKClient + [DA](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/DA_BR_MT6765_20271.bin) + AUTH: Full support                 |
+| Oppo A16k              | CPH2349 & CPH2351   | Helio G35          | MT6765            | MTKClient + [DA](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/DA_BR_MT6765_20271.bin) + AUTH: Full support                 |
 | Oppo A17               | CPH2477                     | Helio G35          | MT6765            | MTKClient: Full support                                                         |
 | Oppo A17K              | CPH2471                     | Helio G35          | MT6765            | MTKClient: Full support                                                         |
 | Oppo A18               | CPH2591                     | Helio G85          | MT6768/MT6769     | MTKClient: problems DAA GUI and cmd, auth_sv5.auth tested                       |
