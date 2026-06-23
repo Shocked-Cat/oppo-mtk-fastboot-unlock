@@ -37,7 +37,7 @@
 | Realme 1               | CPH1859 & CPH1861           | Helio P60          | MT6771            | MTKClient: Support, Probably a clone of the Oppo A3 (2018), also requires a rollback to 8-9 android for the patch to work                                                                              |
 | Realme 12 Plus         | RMX3867                            | Dimensity 7050     | MT6877            | MTKClient + [DA MT6877](https://archive.diablosat.cc/firmwares/amt-dumps/Oppo_Realme_Oneplus_DA/): support, patch did not unlock fastboot, probably due to Android 15+, Android 14 not tested          |
 | Realme С11 & C12 & C15 | RMX2185 & RMX2189 & RMX2180 | Helio G35          | MT6765            | MTKClient: Full support, An update to Android 11 is required.                   |
-| Realme 6               | RMX2001                                   | Helio G95          | MT6785            | MTKClient: Full support.                                      |
+| Realme 6               | RMX2001                                   | Helio G90T         | MT6785            | MTKClient: Full support.                                      |
 | Realme 7               | RMX2151 & RMX2155           | Helio G95          | MT6785            | MTKClient: Full support.                                     |
 | Realme 7 5G            | RMX2111                     | Dimensity 800U     | MT6853            | MTKClient: support, The patch has not been tested, but the probability of success is high.                                                                           |
 | Realme GT Neo          | RMX3031                     | Dimensity 1200     | MT6893            | GeekFlashTool: Full support                                                     |
