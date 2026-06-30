@@ -20,7 +20,8 @@
 | Oppo A91               | PFGM00 & CPH2001 & CPH2021  | Helio P70          | MT6771            | MTKClient: Update to Android 11 required for support                                                                                                                                                   |
 | Oppo A93s              | PFGM00                      | Dimensity 700      | MT6833            | MTKClient: Full support                                                         |
 | Oppo F31 Pro 5G        | CPH2763                     | Dimensity 7300     | MT6878            | [O+ Support Tool]: support; The patch didn't work due to Android 15+.           |
-| Oppo Find X8s          | PKT110                      | Dimensity 9400+    | MT6991            | [O+ Support Tool]: support; fastboot was not unlocked                           |
+| Oppo Find X5 Pro       | PFFM20                      | Dimensity 9000    | MT6983            | GeekFlashTool: To support the patch and ensure the program works, you need to roll back to Android 14.  |
+| Oppo Find X8s          | PKT110                      | Dimensity 9400+     | MT6991            | [O+ Support Tool]: support; fastboot was not unlocked because of Android 15 |
 | Oppo K9 Pro            | PEYM00                      | Dimensity 1200     | MT6893            | GeekFlashTool: Full support                                                     |
 | Oppo Pad 2             | OPD2201                     | Dimensity 9000     | MT6983            | GeekFlashTool: Full support                                                     |
 | Oppo Reno 10 5g        | CPH2531                     | Dimensity 7050     | MT6877V           | MTKClient: problems DAA gui and cmd, auth_sv5.auth not tested                   |
