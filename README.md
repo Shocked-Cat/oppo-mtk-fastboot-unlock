@@ -12,6 +12,11 @@ in which the fastboot lock flag is changed to unlocked.
 ---
 
 ## Instructions
+As an alternative to using a Python script, you can use this website: [PLOnline](https://lf-repo.github.io/PLOnline/) ([open source](https://github.com/LF-Repo/PLOnline)); or compiled exe [PLPatcher](https://github.com/LF-Repo/PLPatcher/releases/tag/1.0.1).
+
+**It's important to understand that these projects aren't directly related to me, I don't monitor their relevance, and I don't contribute to their development. They were probably mostly created using Vibe Code, but that's better than .exe files that steal your personal data...**
+
+
 * Download and install [Python](https://www.python.org/downloads) 3.4+ version (for MTKclient 3.10-3.13)
 * Use [mtkclient](https://github.com/bkerler/mtkclient) and gui, or [GeekFlashTool](https://gitee.com/geekflashtool), or [Penumbra](https://github.com/shomykohai/penumbra) to read the preloader (boot1) dump from you Oppo. If your active slot is B, you must apply the patch to boot2. If slots A/B are missing, you must still apply the patch to boot1.
 * Place the preloader backup in the same folder as preloader_path.py, making sure to name it boot1.bin, then double-click on the Python script. Or use cmd and CLI: `path_preloader.py [input file]`
