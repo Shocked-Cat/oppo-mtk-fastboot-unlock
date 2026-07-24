@@ -1,6 +1,6 @@
 ## [中文版🇨🇳](README_zh-CN.md)
 
-# Unlock Fastboot — Oppo MediaTek (Universal) to Unlock Bootloader
+# Unlock Fastboot — Oppo MediaTek (Android 11-14 Universal) to Unlock Bootloader
 The script in this repository is designed to create a modified *preloader* based on the factory one, 
 in which the fastboot lock flag is changed to unlocked.
 
