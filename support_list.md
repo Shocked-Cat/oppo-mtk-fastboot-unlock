@@ -9,7 +9,7 @@
 | Oppo A17               | CPH2477                             | Helio G35          | MT6765            | MTKClient: Full support                                                          |
 | Oppo A17K              | CPH2471                             | Helio G35          | MT6765            | MTKClient: Full support                                                          |
 | Oppo A18               | CPH2591                             | Helio G85          | MT6768/MT6769     | MTKClient: problems DAA GUI and cmd, auth_sv5.auth tested                        |
-| Oppo A35               | PEFM00                              | Helio P35          | MT6765            | MTKClient: support, the patch did not open fastboot                              |
+| Oppo A35               | PEFM00                              | Helio P35          | MT6765            | Preloader patch does NOT open fastboot (gate is in LK). Use [pefm00/](pefm00/): LK patch + CERT2 re-sign. MTKClient: support |
 | Oppo A54 4G            | CPH2239                             | Helio G35          | MT6765            | MTKClient: problems DAA GUI and cmd, auth_sv5.auth not tested                    |
 | Oppo A55 4G            | CPH2325                             | Helio G35          | MT6765            | MTKClient: Full support                                                          |
 | Oppo A55 5G            | PEMM00 & PEMT00                     | Dimensity 700      | MT6833            | GeekFlashTool: Full support                                                      |
