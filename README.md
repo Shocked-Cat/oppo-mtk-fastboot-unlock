@@ -5,6 +5,13 @@ The script in this repository is designed to create a modified *preloader* based
 in which the fastboot lock flag is changed to unlocked.
 
 ## General information
+
+> **Oppo A35 (PEFM00) is different:** the preloader patch in this repository does **not**
+> open fastboot on that model. The fastboot authorisation is implemented in LK
+> (`opporeserve1 + 0x440C00`, RSA-PSS, bound to the device serial), and LK is protected
+> by the Preloader's SBC. A working method (4-byte LK patch + CERT2 hash-override re-sign)
+> is documented in [pefm00/](pefm00/). Verified on a retail PEFM00: `unlocked: yes`,
+> `fastboot boot` works.
 * It has been discovered that on Realme devices, after flashing the modified preloader into fastboot, it is now impossible to log in using the buttons, but it is still possible to enter fastboot for example with the `adb reboot bootloader` command
 * Android 10 and 15+ do not support this patch. Android 9 may also not support it, but only one device has been tested so far. This is not processor-dependent.
 * It is impossible to fully edit RAW without verification, I don't know how to implement it. That is why this repository will not help you bypass LK verification on many Oppo & Realme
